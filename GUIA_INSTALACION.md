@@ -56,53 +56,29 @@ python -m pip install -r requirements.txt
 
 Este comando instala Django y las demás bibliotecas necesarias para ejecutar el sistema.
 
-## 5. Configurar MySQL
+## 5. Configurar la base de datos SQLite
 
-Iniciar MySQL Server y abrir MySQL Workbench u otra herramienta de administración.
+Para facilitar la instalación y evaluación del prototipo, se utiliza SQLite, que está incluido en Python y no requiere instalar un servidor de base de datos.
 
-Crear una base de datos mediante la siguiente instrucción SQL:
+El proyecto incorpora el archivo config/settings_instalacion.py, que configura automáticamente SQLite.
 
-```sql
-CREATE DATABASE sistema_algebra
-CHARACTER SET utf8mb4
-COLLATE utf8mb4_unicode_ci;
-```
+La base de datos se creará en el archivo db.sqlite3, dentro de la carpeta principal del proyecto, al ejecutar las migraciones.
 
-Es necesario disponer de un usuario de MySQL con permisos para crear y modificar tablas y consultar y registrar datos en esta base.
-
-La configuración de conexión se realizará mediante variables de entorno.
+Esta configuración es independiente de la utilizada durante el desarrollo con MySQL.
 
 ## 6. Configurar las variables de entorno
 
-Crear un archivo llamado `.env` en la carpeta principal del proyecto, al mismo nivel que `manage.py`.
+Para ejecutar el prototipo con SQLite se utilizará el archivo config/settings_instalacion.py.
 
-Incorporar las siguientes variables, reemplazando los valores de ejemplo por los correspondientes a la instalación local:
+Esta configuración incluye una clave de demostración para el entorno local, por lo que no es obligatorio crear un archivo .env para realizar las pruebas.
 
-```dotenv
-DB_NAME=sistema_algebra
-DB_USER=usuario_mysql
-DB_PASSWORD=contraseña_mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-SECRET_KEY=clave_secreta_generada_para_django
-```
-
-Para generar una clave secreta de Django, ejecutar desde el entorno virtual:
-
-```powershell
-python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
-```
-
-Copiar la clave generada en el valor de `SECRET_KEY`.
-
-**Importante:** el archivo `.env` contiene información privada de configuración y no debe publicarse en GitHub.
-
+Esta configuración está destinada exclusivamente a la evaluación local del prototipo y no debe utilizarse en un servidor público de producción.
 ## 7. Crear las tablas de la base de datos
 
 En la terminal, desde la carpeta principal del proyecto, ejecutar:
 
 ```powershell
-python manage.py migrate
+python manage.py migrate --settings=config.settings_instalacion
 ```
 
 Este comando aplica las migraciones de Django y crea las tablas necesarias en MySQL.
@@ -112,7 +88,7 @@ Este comando aplica las migraciones de Django y crea las tablas necesarias en My
 Una vez creadas las tablas, ejecutar:
 
 ```powershell
-python manage.py loaddata datos_iniciales.json
+python manage.py loaddata datos_iniciales.json --settings=config.settings_instalacion
 ```
 
 Este comando incorpora los datos iniciales incluidos en el repositorio, como niveles, temas, patrones matemáticos, errores, ejercicios y pasos de resolución.
@@ -126,14 +102,14 @@ No es necesario volver a ejecutar este comando para cada actualización del cód
 Ejecutar:
 
 ```powershell
-python manage.py runserver
+python manage.py runserver --settings=config.settings_instalacion
 ```
 
 Django iniciará el servidor de desarrollo local.
 
 Abrir en el navegador:
 
-[http://127.0.0.1:8000/aprendizaje/](http://127.0.0.1:8000/aprendizaje/)
+http://127.0.0.1:8000/aprendizaje/acceso/ingresar/
 
 El servidor debe permanecer ejecutándose mientras se utiliza la aplicación.
 
@@ -174,13 +150,13 @@ python -m pip install -r requirements.txt
 Aplicar las migraciones que pudieran haberse incorporado:
 
 ```powershell
-python manage.py migrate
+python manage.py migrate --settings=config.settings_instalacion
 ```
 
 Finalmente, iniciar nuevamente el sistema:
 
 ```powershell
-python manage.py runserver
+python manage.py runserver --settings=config.settings_instalacion
 ```
 
 **Importante:** las actualizaciones habituales del código no requieren eliminar la base de datos ni volver a cargar el archivo `datos_iniciales.json`.

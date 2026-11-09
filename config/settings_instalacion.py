@@ -18,3 +18,5 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+# Permite instalar y ejecutar el prototipo con SQLite
+# sin modificar la configuración principal de desarrollo.
