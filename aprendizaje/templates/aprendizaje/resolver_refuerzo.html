@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resolver ejercicio</title>
+</head>
+<body>
+    <h1>Fracciones equivalentes</h1>
+    <p>Multiplicá el numerador y el denominador por el factor indicado.</p>
+    <p>{{ refuerzo.expresion_generada }}</p>
+
+<form method="post">
+    {% csrf_token %}
+
+    <input type="number" name="numerador" required>
+    <hr>
+    <input type="number" name="denominador" required>
+
+    <button type="submit">Comprobar respuesta</button>
+</form>
+{% if resultado %}
+    {% if resultado.correcto %}
+        <p>¡Respuesta correcta!</p>
+    {% else %}
+        <p>Respuesta incorrecta. Revisá el procedimiento.</p>
+    {% endif %}
+{% endif %}
+{% if explicacion %}
+    <p>{{explicacion.cuerpo}}</p>
+{% endif %}
+
+</body>
+</html>

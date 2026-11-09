@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de jerarquía de operaciones</title>
+    <link rel="stylesheet" href="{% static 'aprendizaje/practica.css' %}">
+</head>
+<body>
+
+<form action="{% url 'salir_estudiante' %}" method="post" class="form-salir">
+    {% csrf_token %}
+
+    <img
+        src="{% static 'aprendizaje/mascota/perrito_dormido.png' %}"
+        alt="Perrito durmiendo"
+        class="perrito-dormido"
+    >
+
+    <button type="submit" class="boton-salir">Cerrar sesión</button>
+</form>
+
+<main class="contenedor">
+    <div class="panel-medallas">
+    <span class="titulo-medallas">Mis medallas</span>
+    <span class="medallas">🏅 {{ medallas }}</span>
+</div>
+    <section class="tarjeta-ejercicio">
+
+        <p class="etapa">NIVEL 5 · TEMA {{ numero_tema }}</p>
+        {% if modo_refuerzo %}
+        <p><strong>Práctica de refuerzo · Dificultad {{ dificultad_refuerzo }} · {{ aciertos_refuerzo }}/9 aciertos</strong></p>
+        {% endif %}
+       {% if completado %}
+    <h1>¡Felicitaciones! Completaste el Tema {{ numero_tema }}</h1>
+    <p>¡Excelente trabajo! Superaste las tres dificultades
+       y demostraste tus conocimientos sobre jerarquía de operaciones.</p>
+        {% if numero_tema < 6 %}
+    <a href="{% url 'explicacion_enteros' %}"
+   class="boton-principal">
+    Continuar al siguiente tema
+</a>
+{% endif %}
+{% else %}
+        {% if not modo_refuerzo %}<p><strong>Dificultad {{ dificultad_refuerzo }} · {{ aciertos_dificultad }}/3 aciertos</strong></p>{% endif %}
+        <h1>¡Resolvé paso a paso!</h1>
+        {% endif %}
+{% if not completado %}
+        <div class="ejercicio">
+            {{ expresion_numerica }}
+        </div>
+
+        <p>Escribí cómo queda la operación después de cada paso.</p>
+        <div class="mascota-ayuda">
+    <img src="{% static 'aprendizaje/mascota/perrito_refuerzo.png' %}"
+         alt="Perrito salchicha animando al estudiante"
+         class="imagen-mascota">
+
+    <p>¡Vos podés! Resolvé la operación paso a paso.</p>
+</div>
+
+        {% if not completado %}
+        <form method="post" id="formulario-ejercicio">
+            {% csrf_token %}
+            <input type="hidden" name="token_ejercicio" value="{{ token_ejercicio }}">
+
+            <div id="contenedor-pasos">
+                <div class="fila-paso">
+                    <label for="paso-1">Paso 1</label>
+                    <input type="text" id="paso-1"
+                           class="campo-paso"
+                           autocomplete="off"
+                        required>
+                </div>
+
+                <div class="fila-paso">
+                    <label for="paso-2">Paso 2</label>
+                    <input type="text" id="paso-2"
+                           class="campo-paso"
+                           autocomplete="off">
+                </div>
+            </div>
+
+            <button type="button" id="agregar-paso">
+                + Agregar paso
+            </button>
+
+            <div class="fila-resultado">
+                <label for="resultado">Resultado final</label>
+                <input type="text" id="resultado"
+                       name="resultado" required>
+            </div>
+
+            <button type="submit" class="boton-principal">
+                Comprobar respuesta
+            </button>
+        </form>
+        {% endif %}
+        {% endif %}
+
+    </section>
+    <div id="ventana-respuesta" class="ventana-oculta">
+    <div class="tarjeta-respuesta">
+        <img id="imagen-respuesta"
+             src="{% static 'aprendizaje/mascota/perrito_correcto.png' %}"
+             alt="Perrito salchicha">
+
+        <h2 id="titulo-respuesta">¡Correcto!</h2>
+
+        <p id="mensaje-respuesta">
+            ¡Excelente trabajo! Ganaste una medalla.
+        </p>
+
+        <button type="button" id="cerrar-respuesta">
+            Continuar
+        </button>
+    </div>
+</div>
+</main>
+
+<script>
+    let numeroPaso = 2;
+
+    document.getElementById("agregar-paso")?.addEventListener("click", function () {
+        numeroPaso++;
+
+        const fila = document.createElement("div");
+        fila.className = "fila-paso";
+
+        const etiqueta = document.createElement("label");
+        etiqueta.htmlFor = "paso-" + numeroPaso;
+        etiqueta.textContent = "Paso " + numeroPaso;
+
+        const campo = document.createElement("input");
+        campo.type = "text";
+        campo.id = "paso-" + numeroPaso;
+        campo.className = "campo-paso";
+        campo.autocomplete = "off";
+
+        fila.appendChild(etiqueta);
+        fila.appendChild(campo);
+
+        document.getElementById("contenedor-pasos").appendChild(fila);
+    });
+
+    document.getElementById("formulario-ejercicio")?.addEventListener("submit", function () {
+        const pasos = Array.from(document.querySelectorAll(".campo-paso"))
+            .map(campo => campo.value.trim())
+            .filter(valor => valor !== "");
+
+        const oculto = document.createElement("input");
+        oculto.type = "hidden";
+        oculto.name = "pasos";
+        oculto.value = pasos.join("\n");
+
+        this.appendChild(oculto);
+    });
+    function mostrarRespuesta(correcto) {
+    const ventana = document.getElementById("ventana-respuesta");
+    const imagen = document.getElementById("imagen-respuesta");
+    const titulo = document.getElementById("titulo-respuesta");
+    const mensaje = document.getElementById("mensaje-respuesta");
+
+    if (correcto) {
+        imagen.src = "{% static 'aprendizaje/mascota/perrito_correcto.png' %}";
+        titulo.textContent = "¡Correcto!";
+        mensaje.textContent = {% if modo_refuerzo %}"¡Correcto! Seguimos con el refuerzo."{% else %}"¡Excelente trabajo! Ganaste una medalla."{% endif %};
+    } else {
+        imagen.src = "{% static 'aprendizaje/mascota/perrito_error.png' %}";
+        titulo.textContent = "¡Ups!";
+        mensaje.textContent = "Recordá resolver primero las multiplicaciones y divisiones, y después las sumas y restas.";
+    }
+
+    ventana.style.display = "flex";
+}
+{% if evaluacion %}
+    mostrarRespuesta({{ evaluacion.correcto|yesno:"true,false" }});
+{% endif %}
+
+document.getElementById("cerrar-respuesta").addEventListener("click", function () {
+    document.getElementById("ventana-respuesta").style.display = "none";
+    {% if evaluacion and evaluacion.correcto %}
+    window.location.href = "{% url 'practica_jerarquia' %}";
+    {% endif %}
+});
+</script>
+
+</body>
+</html>

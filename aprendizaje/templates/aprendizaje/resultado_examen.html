@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <h1>Resultado de la evaluación final</h1>
+
+    <p>Aciertos: {{ resultado.aciertos }} de 4</p>
+    <p>Calificación: {{ resultado.porcentaje }}%</p>
+
+    {% if resultado.aprobado %}
+        <h2>¡Tema aprobado!</h2>
+    {% else %}
+        <h2>Evaluación no aprobada</h2>
+        <p>Deberás repetir el Tema 6 para reforzar tus conocimientos.</p>
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+/* Configuración general */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f3ff;
+    color: #302452;
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Tarjeta del ejercicio */
+.tarjeta-ejercicio {
+    background: white;
+    padding: 36px;
+    border-radius: 24px;
+    box-shadow: 0 10px 35px rgba(65, 35, 130, 0.12);
+    border: 2px solid #ebe3ff;
+}
+
+/* Identificación del tema */
+.etapa {
+    display: inline-block;
+    background: #eee7ff;
+    color: #7142db;
+    padding: 9px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Título */
+h1 {
+    color: #5634b5;
+    font-size: 34px;
+    margin: 18px 0 25px;
+}
+
+/* Operación matemática */
+.ejercicio {
+    background: linear-gradient(135deg, #ede7ff, #e3efff);
+    border: 2px solid #c9b5ff;
+    border-radius: 18px;
+    padding: 30px 18px;
+    margin: 25px 0;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+/* Contenedor de los pasos */
+#contenedor-pasos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Cada renglón de resolución */
+.fila-paso {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.fila-paso label {
+    min-width: 70px;
+    font-weight: 700;
+    color: #69539a;
+}
+
+/* Campos de los pasos */
+.campo-paso {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
+    border: 2px solid #ddd3f6;
+    border-radius: 12px;
+    background: #faf9ff;
+    font-size: 19px;
+    font-family: inherit;
+}
+
+/* Campo seleccionado */
+.campo-paso:focus,
+.fila-resultado input:focus {
+    outline: none;
+    border-color: #8753df;
+    box-shadow: 0 0 0 4px rgba(135, 83, 223, 0.12);
+}
+
+/* Botón para agregar renglones */
+#agregar-paso {
+    display: block;
+    margin: 18px 0 30px 84px;
+    padding: 11px 20px;
+    background: #eee7ff;
+    color: #6940c7;
+    border: 2px dashed #ae8cf0;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#agregar-paso:hover {
+    background: #e0d2ff;
+}
+
+/* Resultado final */
+.fila-resultado {
+    background: #edfaef;
+    border: 2px solid #9bd8a5;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 18px;
+}
+
+.fila-resultado label {
+    display: block;
+    color: #286c40;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.fila-resultado input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #b3dcb9;
+    border-radius: 10px;
+    background: white;
+    font-size: 20px;
+}
+
+/* Botón principal */
+.boton-principal {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    margin-top: 28px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #8c4de5, #6030bc);
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #45208d;
+}
+
+.boton-principal:hover {
+    background: linear-gradient(135deg, #9b5df0, #7140d0);
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+    .contenedor {
+        margin: 10px auto;
+        padding: 12px;
+    }
+
+    .tarjeta-ejercicio {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .ejercicio {
+        font-size: 24px;
+        padding: 22px 12px;
+    }
+
+    .fila-paso {
+        gap: 8px;
+    }
+
+    .fila-paso label {
+        min-width: 55px;
+        font-size: 13px;
+    }
+
+    .campo-paso {
+        font-size: 16px;
+    }
+
+    #agregar-paso {
+        margin-left: 0;
+    }
+}
+.panel-medallas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 16px 24px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    border: 2px solid #e5d9ff;
+}
+
+.titulo-medallas {
+    font-weight: 800;
+    color: #6030bc;
+}
+
+.medallas {
+    font-size: 24px;
+    font-weight: 800;
+    color: #c58a12;
+}
+.mascota-ayuda {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #f3edff;
+    border-radius: 18px;
+    padding: 12px 20px;
+    margin: 20px 0;
+}
+
+.imagen-mascota {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+}
+
+.mascota-ayuda p {
+    color: #6030bc;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+@media (max-width: 600px) {
+    .imagen-mascota {
+        width: 80px;
+        height: 80px;
+    }
+}
+.ventana-oculta {
+    display: none;
+}
+
+#ventana-respuesta {
+    position: fixed;
+    inset: 0;
+    background: rgba(35, 20, 65, 0.65);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.tarjeta-respuesta {
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-respuesta img {
+    width: 180px;
+    max-width: 100%;
+}
+
+.tarjeta-respuesta h2 {
+    color: #6030bc;
+    font-size: 30px;
+}
+
+.tarjeta-respuesta p {
+    font-size: 18px;
+    color: #51436b;
+}
+
+#cerrar-respuesta {
+    background: #7540d2;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 35px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+ .form-salir {
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    margin: 0;
+    z-index: 10;
+}
+
+.perrito-dormido {
+    position: absolute;
+    width: 155px;
+    height: auto;
+    bottom: 100%;
+    right: 0;
+    pointer-events: none;
+}
+
+.boton-salir {
+    background: #ffdf57;
+    color: #252052;
+    border: 3px solid #35c759;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+}

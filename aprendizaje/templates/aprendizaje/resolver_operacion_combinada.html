@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones combinadas</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f3f6fb;
+            color: #253047;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .contenedor {
+            max-width: 780px;
+            margin: 40px auto;
+            padding: 32px;
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #253d70;
+        }
+
+        .etapa {
+            color: #526785;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .expresion {
+            padding: 24px 12px;
+            margin: 24px 0;
+            background: #edf3ff;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+        }
+
+        label {
+            display: block;
+            margin: 18px 0 8px;
+            font-weight: bold;
+        }
+
+        textarea,
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #b9c5d7;
+            border-radius: 8px;
+            font: inherit;
+        }
+
+        textarea:focus,
+        input:focus {
+            outline: 2px solid #7d9fdf;
+            border-color: #416bb4;
+        }
+
+        button {
+            margin-top: 22px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background: #315ba6;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #244782;
+        }
+
+        .mensaje {
+            margin: 20px 0;
+            padding: 14px 18px;
+            border-radius: 8px;
+            background: #edf3ff;
+        }
+
+        .correcto {
+            background: #e8f6ed;
+            color: #24633b;
+        }
+
+        .advertencia {
+            background: #fff4df;
+            color: #795116;
+        }
+
+        .ayuda {
+            color: #65738a;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .contenedor {
+                margin: 12px;
+                padding: 20px;
+            }
+
+            .expresion {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<main class="contenedor">
+
+    <h1>Operaciones combinadas</h1>
+
+    {% if es_evaluacion %}
+        <p class="etapa">Evaluación final</p>
+        <p>Resolvé el ejercicio. Conocerás tu calificación al finalizar los cuatro.</p>
+    {% else %}
+        <p class="etapa">Práctica de álgebra</p>
+    {% endif %}
+
+    {% if evaluacion and not es_evaluacion %}
+        {% if evaluacion.accion == "continuar" %}
+            <div class="mensaje correcto">
+                ¡Correcto! Resolviste el ejercicio.
+            </div>
+        {% elif evaluacion.accion == "reforzar" %}
+            <div class="mensaje advertencia">
+                Detectamos un error. Vamos a practicar la regla correspondiente.
+            </div>
+        {% elif evaluacion.accion == "repetir" %}
+            <div class="mensaje advertencia">
+                Revisá tu procedimiento e intentá nuevamente.
+            </div>
+        {% endif %}
+    {% endif %}
+
+    {% if mostrar_resultado_refuerzo %}
+        {% if refuerzo_correcto %}
+            {% if hay_refuerzo_pendiente %}
+                <div class="mensaje correcto">
+                    ¡Respuesta correcta! Continuá con el siguiente refuerzo.
+                </div>
+            {% else %}
+                <div class="mensaje correcto">
+                    ¡Felicitaciones! Completaste los seis ejercicios de refuerzo.
+                </div>
+            {% endif %}
+        {% else %}
+            <div class="mensaje advertencia">
+                El resultado no es correcto. Intentá nuevamente.
+            </div>
+        {% endif %}
+    {% endif %}
+
+    {% if refuerzo %}
+
+        <h2>Ejercicio de refuerzo</h2>
+        <p>{{ refuerzo.plantilla.enunciado }}</p>
+
+        <div class="expresion">
+            {{ refuerzo.expresion }}
+        </div>
+
+        {% if not mostrar_resultado_refuerzo or hay_refuerzo_pendiente or not refuerzo_correcto %}
+            <form method="post">
+                {% csrf_token %}
+
+                <input type="hidden" name="tipo_respuesta" value="refuerzo">
+
+                <label for="resultado_refuerzo">Resultado del refuerzo</label>
+                <input
+                    type="text"
+                    id="resultado_refuerzo"
+                    name="resultado_refuerzo"
+                    required
+                    autocomplete="off"
+                >
+
+                <button type="submit">Comprobar refuerzo</button>
+            </form>
+        {% endif %}
+
+        {% if mostrar_resultado_refuerzo and refuerzo_correcto and not hay_refuerzo_pendiente %}
+            <form method="get">
+                <button type="submit">Continuar con la práctica</button>
+            </form>
+        {% endif %}
+
+    {% elif evaluacion and evaluacion.accion == "reforzar" and not es_evaluacion %}
+
+        <div class="mensaje advertencia">
+            No hay ejercicios de refuerzo disponibles para esta regla.
+        </div>
+
+    {% else %}
+
+        <p>{{ ejercicio.enunciado }}</p>
+
+        <div class="expresion">
+            {{ expresion_numerica }}
+        </div>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <label for="pasos">Mostrá los pasos de tu resolución</label>
+            <p class="ayuda">Escribí un paso por línea, respetando la jerarquía de operaciones.</p>
+
+            <textarea
+                name="pasos"
+                id="pasos"
+                rows="6"
+                placeholder="Escribí un paso por línea"
+                required
+            ></textarea>
+
+            <label for="resultado">Resultado final</label>
+            <input
+                type="text"
+                id="resultado"
+                name="resultado"
+                placeholder="Ejemplo: -7/3"
+                required
+                autocomplete="off"
+            >
+
+            <button type="submit">
+                {% if es_evaluacion %}
+                    Enviar respuesta del examen
+                {% else %}
+                    Comprobar respuesta
+                {% endif %}
+            </button>
+        </form>
+
+    {% endif %}
+
+</main>
+</body>
+</html>

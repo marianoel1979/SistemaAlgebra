@@ -1,0 +1,27 @@
+# Entorno virtual
+.venv/
+venv/
+
+# Variables de entorno y contraseñas
+.env
+.env.*
+!.env.example
+
+# Bases de datos locales
+db.sqlite3
+*.sqlite3
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Configuración de PyCharm
+.idea/
+
+# Archivos generados por Django
+staticfiles/
+media/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db

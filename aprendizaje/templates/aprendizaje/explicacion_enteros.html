@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones combinadas con números enteros</title>
+    <link rel="stylesheet" href="{% static 'aprendizaje/explicaciones.css' %}">
+</head>
+
+<body>
+<main class="pagina">
+
+    <header class="encabezado">
+        <form action="{% url 'salir_estudiante' %}" method="post" class="form-salir">
+            {% csrf_token %}
+            <img
+                src="{% static 'aprendizaje/mascota/perrito_dormido.png' %}"
+                alt="Perrito durmiendo"
+                class="perrito-dormido"
+            >
+            <button type="submit" class="boton-salir">Cerrar sesión</button>
+        </form>
+
+        <div class="simbolos">✦ + − × ÷ ( ) ✦</div>
+        <h1>Operaciones combinadas<br>con números enteros</h1>
+        <p>Nivel 5 · Tema 2</p>
+    </header>
+
+    <div class="contenido">
+
+        <section class="introduccion">
+            Los números enteros pueden ser <strong>positivos, negativos o cero</strong>.
+            Para resolver operaciones combinadas debemos respetar la
+            <strong>jerarquía de operaciones</strong> y aplicar correctamente
+            las <strong>reglas de los signos</strong>.
+        </section>
+
+        <div class="columnas">
+
+            <section class="panel">
+                <h2>Recordemos las reglas</h2>
+
+                <div class="regla rosa">
+                    <span class="numero">1</span>
+                    <div>
+                        <h3>Números negativos</h3>
+                        <p>Cuando un número negativo aparece en una multiplicación,
+                        lo escribimos entre paréntesis.</p>
+                        <p><strong>5 × (−3)</strong></p>
+                    </div>
+                </div>
+
+                <div class="regla amarillo">
+                    <span class="numero">2</span>
+                    <div>
+                        <h3>Multiplicación y división</h3>
+                        <p>Signos iguales dan resultado positivo.</p>
+                        <p><strong>(−3) × (−2) = 6</strong></p>
+                        <p>Signos diferentes dan resultado negativo.</p>
+                        <p><strong>(−3) × 2 = −6</strong></p>
+                    </div>
+                </div>
+
+                <div class="regla verde">
+                    <span class="numero">3</span>
+                    <div>
+                        <h3>Suma de enteros</h3>
+                        <p>Si tienen el mismo signo, sumamos sus valores
+                        absolutos y conservamos el signo.</p>
+                        <p><strong>(−4) + (−3) = −7</strong></p>
+                        <p>Si tienen signos diferentes, restamos sus valores
+                        absolutos y conservamos el signo del número
+                        con mayor valor absoluto.</p>
+                        <p><strong>8 + (−5) = 3</strong></p>
+                    </div>
+                </div>
+
+                <div class="regla azul">
+                    <span class="numero">4</span>
+                    <div>
+                        <h3>Resta de enteros</h3>
+                        <p>Restar un número equivale a sumar su opuesto.</p>
+                        <p><strong>6 − (−4) = 6 + 4 = 10</strong></p>
+                        <p><strong>6 − 9 = −3</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel ejemplos">
+                <h2>Veamos algunos ejemplos</h2>
+
+                <article class="ejemplo">
+                    <span class="etiqueta">Ejemplo 1</span>
+                    <div class="operacion">5 + (−3) × 2</div>
+
+                    <div class="paso">
+                        <strong>1.</strong> Multiplicamos:
+                        (−3) × 2 = −6
+                    </div>
+                    <div class="paso">
+                        <strong>2.</strong> Sumamos:
+                        5 + (−6) = −1
+                    </div>
+
+                    <div class="resultado">Resultado: −1</div>
+                </article>
+
+                <article class="ejemplo">
+                    <span class="etiqueta">Ejemplo 2</span>
+                    <div class="operacion">8 − (−4) × 3 + 2</div>
+
+                    <div class="paso">
+                        <strong>1.</strong> Multiplicamos:
+                        (−4) × 3 = −12
+                    </div>
+                    <div class="paso">
+                        <strong>2.</strong> Reemplazamos:
+                        8 − (−12) + 2
+                    </div>
+                    <div class="paso">
+                        <strong>3.</strong> Resolvemos:
+                        8 + 12 + 2 = 22
+                    </div>
+
+                    <div class="resultado">Resultado: 22</div>
+                </article>
+            </section>
+
+        </div>
+
+        <section class="panel">
+            <h2>¿Cómo resolvemos operaciones combinadas?</h2>
+
+            <p>
+                Recordá que los términos están delimitados por los signos
+                <strong>+</strong> y <strong>−</strong> que se encuentran
+                fuera de los paréntesis.
+            </p>
+
+            <p>
+                Primero resolvemos los paréntesis que contienen operaciones.
+                Después las multiplicaciones y divisiones.
+                Finalmente realizamos las sumas y restas.
+            </p>
+
+            <h3>Ejemplo con varias multiplicaciones</h3>
+
+            <p><strong>6 + (−2) × 4 − 3 × (−5)</strong></p>
+
+            <p><strong>Paso 1:</strong> 6 + (−8) − 3 × (−5)</p>
+            <p><strong>Paso 2:</strong> 6 + (−8) − (−15)</p>
+            <p><strong>Paso 3:</strong> −2 − (−15)</p>
+            <p><strong>Resultado:</strong> 13</p>
+
+            <h3>Ejemplo con paréntesis</h3>
+
+            <p><strong>(−3) × (4 − 7) + 5</strong></p>
+
+            <p><strong>Paso 1:</strong> (−3) × (−3) + 5</p>
+            <p><strong>Paso 2:</strong> 9 + 5</p>
+            <p><strong>Resultado:</strong> 14</p>
+        </section>
+
+        <div class="nota">
+            <strong>¡Recordá!</strong>
+            El signo de un número no cambia el orden de las operaciones.
+            Primero identificá qué operación corresponde resolver,
+            después aplicá las reglas de los signos y comprobá tus cálculos.
+        </div>
+
+        <div class="accion">
+            <a class="boton" href="{% url 'practica_tema' 2 %}">
+                🎯 A practicar →
+            </a>
+        </div>
+
+    </div>
+</main>
+</body>
+</html>

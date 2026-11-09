@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerarquía de operaciones</title>
+    <link rel="stylesheet" href="{% static 'aprendizaje/explicaciones.css' %}">
+
+</head>
+
+<body>
+<main class="pagina">
+
+    <header class="encabezado">
+        <form action="{% url 'salir_estudiante' %}" method="post" class="form-salir">
+    {% csrf_token %}
+            <img
+    src="{% static 'aprendizaje/mascota/perrito_dormido.png' %}"
+    alt="Perrito durmiendo"
+    class="perrito-dormido"
+>
+    <button type="submit" class="boton-salir">Cerrar sesión</button>
+</form>
+        <div class="simbolos">✦ + × ÷ ( ) ✦</div>
+        <h1>Jerarquía de<br>operaciones</h1>
+        <p>Nivel 5 · Tema 1</p>
+    </header>
+
+    <div class="contenido">
+
+        <section class="introduccion">
+            Cuando en una misma expresión hay varias operaciones,
+            debemos resolverlas en un <strong>orden específico</strong>.
+            A este orden lo llamamos
+            <strong>jerarquía de operaciones</strong>.
+        </section>
+        <section class="panel">
+    <h2>¿Cómo identificamos los términos?</h2>
+
+    <p>
+        Los términos están separados por los signos
+        <strong>+</strong> y <strong>−</strong>
+        que se encuentran fuera de los paréntesis.
+    </p>
+
+    <div class="terminos-ejemplo">
+        <div class="termino">
+            <span class="nombre-termino">Término 1</span>
+            <span class="corchete"></span>
+            <span class="expresion-termino">5</span>
+        </div>
+
+        <span class="operador-termino">+</span>
+
+        <div class="termino">
+            <span class="nombre-termino">Término 2</span>
+            <span class="corchete"></span>
+            <span class="expresion-termino">2 × 3</span>
+        </div>
+
+        <span class="operador-termino">−</span>
+
+        <div class="termino">
+            <span class="nombre-termino">Término 3</span>
+            <span class="corchete"></span>
+            <span class="expresion-termino">4</span>
+        </div>
+    </div>
+
+    <p>
+        Cada término puede contener multiplicaciones,
+        divisiones o potencias. Primero resolvemos esas
+        operaciones y después sumamos o restamos los términos.
+    </p>
+</section>
+
+        <div class="columnas">
+
+            <section class="panel">
+                <h2>¿Cuál es el orden?</h2>
+
+                <div class="regla rosa">
+                    <span class="numero">1</span>
+                    <div>
+                        <h3>Paréntesis ( )</h3>
+                        <p>Primero resolvemos lo que está dentro de los paréntesis, de adentro hacia afuera.</p>
+                    </div>
+                </div>
+
+                <div class="regla amarillo">
+                    <span class="numero">2</span>
+                    <div>
+                        <h3>Potencias</h3>
+                        <p>Después calculamos las potencias.</p>
+                    </div>
+                </div>
+
+                <div class="regla verde">
+                    <span class="numero">3</span>
+                    <div>
+                        <h3>Multiplicación y división</h3>
+                        <p>Tienen la misma prioridad. Se resuelven de izquierda a derecha.</p>
+                    </div>
+                </div>
+
+                <div class="regla azul">
+                    <span class="numero">4</span>
+                    <div>
+                        <h3>Suma y resta</h3>
+                        <p>Tienen la misma prioridad. También se resuelven de izquierda a derecha.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel ejemplos">
+                <h2>Veamos algunos ejemplos</h2>
+
+                <article class="ejemplo">
+                    <span class="etiqueta">Ejemplo 1</span>
+                    <div class="operacion">5 + 2 × 3</div>
+
+                    <div class="paso">
+                        <strong>1.</strong> Primero multiplicamos:
+                        2 × 3 = 6
+                    </div>
+                    <div class="paso">
+                        <strong>2.</strong> Después sumamos:
+                        5 + 6 = 11
+                    </div>
+
+                    <div class="resultado">Resultado: 11</div>
+                </article>
+
+                <article class="ejemplo">
+                    <span class="etiqueta">Ejemplo 2</span>
+                    <div class="operacion">2 × (−3 + 4)</div>
+
+                    <div class="paso">
+                        <strong>1.</strong> Resolvemos el paréntesis:
+                        −3 + 4 = 1
+                    </div>
+                    <div class="paso">
+                        <strong>2.</strong> Multiplicamos:
+                        2 × 1 = 2
+                    </div>
+
+                    <div class="resultado">Resultado: 2</div>
+                </article>
+            </section>
+        </div>
+<section class="panel">
+    <h2>¿Cuándo resolvemos las potencias?</h2>
+
+    <p>
+        Primero resolvemos las operaciones dentro de los paréntesis,
+        respetando también la jerarquía de operaciones en su interior.
+        Después resolvemos las potencias que quedan fuera.
+    </p>
+
+    <h3>1. Potencia dentro de un paréntesis</h3>
+    <p><strong>(2² + 3) × 4</strong></p>
+    <p>Primero: (4 + 3) × 4</p>
+    <p>Después: 7 × 4 = <strong>28</strong></p>
+
+    <h3>2. Potencia aplicada a un paréntesis</h3>
+    <p><strong>(2 + 3)² × 4</strong></p>
+    <p>Primero: (5)² × 4</p>
+    <p>Después: 25 × 4 = <strong>100</strong></p>
+
+    <h3>3. Potencia fuera del paréntesis</h3>
+    <p><strong>3² + 2 × (5 - 1)</strong></p>
+    <p>Primero: 3² + 2 × 4</p>
+    <p>Después: 9 + 8 = <strong>17</strong></p>
+</section>
+        <div class="nota">
+            <strong>¡Recordá!</strong> Multiplicación y división tienen
+            la misma prioridad, igual que suma y resta.
+            En ambos casos avanzamos de izquierda a derecha.
+        </div>
+
+        <div class="accion">
+            <a class="boton" href="{% url 'practica_jerarquia' %}" class="boton-principal">
+                🎯 A practicar →
+            </a>
+
+        </div>
+
+    </div>
+</main>
+</body>
+</html>
