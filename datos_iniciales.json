@@ -1101,5 +1101,426 @@
     "regla": "resolver_resta",
     "error_asociado": null
   }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 1,
+  "fields": {
+    "tema": 1,
+    "enunciado": "Suma las siguientes expresiones",
+    "expresion_inicial": "-3 +(5-6)",
+    "resultado_correcto": "-4",
+    "dificultad": 2,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 2,
+  "fields": {
+    "tema": 1,
+    "enunciado": "Resolvé la siguiente suma: 4 + 3",
+    "expresion_inicial": "4 + 3",
+    "resultado_correcto": "7",
+    "dificultad": 1,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 3,
+  "fields": {
+    "tema": 1,
+    "enunciado": "Resolvé la siguiente suma: 12 + 5",
+    "expresion_inicial": "12 + 5",
+    "resultado_correcto": "17",
+    "dificultad": 1,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 4,
+  "fields": {
+    "tema": 1,
+    "enunciado": "Resolvé la siguiente suma: 23 + 14",
+    "expresion_inicial": "23 + 14",
+    "resultado_correcto": "37",
+    "dificultad": 1,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 5,
+  "fields": {
+    "tema": 1,
+    "enunciado": "Resolvé la siguiente suma: 48 + 27",
+    "expresion_inicial": "48 + 27",
+    "resultado_correcto": "75",
+    "dificultad": 2,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 6,
+  "fields": {
+    "tema": 1,
+    "enunciado": "Resolvé la siguiente suma: 136 + 58",
+    "expresion_inicial": "136 + 58",
+    "resultado_correcto": "194",
+    "dificultad": 2,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 7,
+  "fields": {
+    "tema": 1,
+    "enunciado": "Resolvé la siguiente suma: 278 + 156",
+    "expresion_inicial": "278 + 156",
+    "resultado_correcto": "434",
+    "dificultad": 2,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 8,
+  "fields": {
+    "tema": 1,
+    "enunciado": "Resolvé la siguiente suma: 487 + 365 + 128",
+    "expresion_inicial": "487 + 365 + 128",
+    "resultado_correcto": "980",
+    "dificultad": 3,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 9,
+  "fields": {
+    "tema": 1,
+    "enunciado": "Resolvé la siguiente suma: 1758 + 2486",
+    "expresion_inicial": "1758 + 2486",
+    "resultado_correcto": "4244",
+    "dificultad": 3,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 10,
+  "fields": {
+    "tema": 1,
+    "enunciado": "Resolvé la siguiente suma: 3679 + 2845 + 1176",
+    "expresion_inicial": "3679 + 2845 + 1176",
+    "resultado_correcto": "7700",
+    "dificultad": 3,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 11,
+  "fields": {
+    "tema": 2,
+    "enunciado": "Obtené una fracción equivalente multiplicando el numerador y el denominador por 3.",
+    "expresion_inicial": "2/5",
+    "resultado_correcto": "6/15",
+    "dificultad": 1,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 12,
+  "fields": {
+    "tema": 2,
+    "enunciado": "Obtené una fracción equivalente multiplicando el numerador y el denominador por 4.",
+    "expresion_inicial": "3/7",
+    "resultado_correcto": "12/28",
+    "dificultad": 2,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 13,
+  "fields": {
+    "tema": 2,
+    "enunciado": "Obtené una fracción equivalente multiplicando el numerador y el denominador por 7.",
+    "expresion_inicial": "5/12",
+    "resultado_correcto": "35/84",
+    "dificultad": 3,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 14,
+  "fields": {
+    "tema": 3,
+    "enunciado": "Resolvé la operación respetando la jerarquía y mostrando cada paso.",
+    "expresion_inicial": "a+b*c",
+    "resultado_correcto": null,
+    "dificultad": 1,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 15,
+  "fields": {
+    "tema": 8,
+    "enunciado": "Resolver la siguiente operación combinada respetando la jerarquía de operaciones y mostrando cada paso.",
+    "expresion_inicial": "a*(b-c)+d/e*f/g-h*(i+j)**2+(l-m)/n/p",
+    "resultado_correcto": null,
+    "dificultad": 3,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 16,
+  "fields": {
+    "tema": 18,
+    "enunciado": "Resolvé la siguiente multiplicación de fracciones y simplificá el resultado cuando sea posible.",
+    "expresion_inicial": "a/b*c/d",
+    "resultado_correcto": "a*c/(b*d)",
+    "dificultad": 1,
+    "regla_refuerzo": "multiplicar_fracciones",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 17,
+  "fields": {
+    "tema": 18,
+    "enunciado": "Resolvé la multiplicación de fracciones y simplificá el resultado.",
+    "expresion_inicial": "a/b*c/d",
+    "resultado_correcto": "a*c/(b*d)",
+    "dificultad": 2,
+    "regla_refuerzo": "multiplicar_fracciones",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 18,
+  "fields": {
+    "tema": 18,
+    "enunciado": "Resolvé la multiplicación de fracciones y simplificá el resultado.",
+    "expresion_inicial": "a/b*c/d",
+    "resultado_correcto": "a*c/(b*d)",
+    "dificultad": 3,
+    "regla_refuerzo": "multiplicar_fracciones",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 19,
+  "fields": {
+    "tema": 8,
+    "enunciado": "Resolvé la siguiente suma de fracciones, respetando el orden de las operaciones.",
+    "expresion_inicial": "a/b+c/d",
+    "resultado_correcto": "(a*d+b*c)/(b*d)",
+    "dificultad": 1,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 20,
+  "fields": {
+    "tema": 8,
+    "enunciado": "Resolvé la siguiente operación combinada, respetando el orden..",
+    "expresion_inicial": "a*(b+c)+d",
+    "resultado_correcto": "a*b+a*c+d",
+    "dificultad": 1,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 21,
+  "fields": {
+    "tema": 8,
+    "enunciado": "Resolvé la siguiente operación combinada, respetando la jerarquía de operaciones.",
+    "expresion_inicial": "a**2+b/c+d",
+    "resultado_correcto": "a**2+b/c+d",
+    "dificultad": 1,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 22,
+  "fields": {
+    "tema": 8,
+    "enunciado": "Resolvé la operación combinada con resta de fracciones.",
+    "expresion_inicial": "a/b-c/d+e",
+    "resultado_correcto": "(a*d-b*c)/(b*d)+e",
+    "dificultad": 2,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 23,
+  "fields": {
+    "tema": 8,
+    "enunciado": "Resolvé respetando los paréntesis y las potencias.",
+    "expresion_inicial": "a*(b-c)+d**2",
+    "resultado_correcto": "a*b-a*c+d**2",
+    "dificultad": 2,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 24,
+  "fields": {
+    "tema": 8,
+    "enunciado": "Resolvé respetando la jerarquía de operaciones.",
+    "expresion_inicial": "(a+b)**2-c/d+e*f",
+    "resultado_correcto": "a**2+2*a*b+b**2-c/d+e*f",
+    "dificultad": 2,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 25,
+  "fields": {
+    "tema": 8,
+    "enunciado": "Resolvé la operación combinada respetando la jerarquía de operaciones.",
+    "expresion_inicial": "a*(b-c)+d/e*f/g-h*(i+j)**2+(l-m)/n/p",
+    "resultado_correcto": "a*(b-c)+d*f/(e*g)-h*(i+j)**2+(l-m)/(n*p)",
+    "dificultad": 3,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 26,
+  "fields": {
+    "tema": 8,
+    "enunciado": "Resolvé la operación combinada con potencias y fracciones.",
+    "expresion_inicial": "(a-b)**2+c/d-e/f*g+h",
+    "resultado_correcto": "(a-b)**2+c/d-e*g/f+h",
+    "dificultad": 3,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.ejercicio",
+  "pk": 27,
+  "fields": {
+    "tema": 8,
+    "enunciado": "Resolvé la operación combinada aplicando correctamente los paréntesis, las potencias y las operaciones con fracciones.",
+    "expresion_inicial": "a/b*c/d-e*(f+g)**2+h/i",
+    "resultado_correcto": "a*c/(b*d)-e*(f+g)**2+h/i",
+    "dificultad": 3,
+    "regla_refuerzo": "",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.pasoejerciciobase",
+  "pk": 1,
+  "fields": {
+    "ejercicio": 1,
+    "numero_paso": 1,
+    "expresion_esperada": "-3 + (-1)",
+    "tipo_operacion": "resta"
+  }
+},
+{
+  "model": "aprendizaje.pasoejerciciobase",
+  "pk": 2,
+  "fields": {
+    "ejercicio": 1,
+    "numero_paso": 2,
+    "expresion_esperada": "-4",
+    "tipo_operacion": "suma"
+  }
+},
+{
+  "model": "aprendizaje.pasoejerciciobase",
+  "pk": 3,
+  "fields": {
+    "ejercicio": 9,
+    "numero_paso": 1,
+    "expresion_esperada": "1758",
+    "tipo_operacion": "Primer sumando"
+  }
+},
+{
+  "model": "aprendizaje.pasoejerciciobase",
+  "pk": 4,
+  "fields": {
+    "ejercicio": 9,
+    "numero_paso": 2,
+    "expresion_esperada": "2786",
+    "tipo_operacion": "Segundo sumando"
+  }
+},
+{
+  "model": "aprendizaje.pasoejerciciobase",
+  "pk": 5,
+  "fields": {
+    "ejercicio": 9,
+    "numero_paso": 3,
+    "expresion_esperada": "111-",
+    "tipo_operacion": "Llevadas"
+  }
+},
+{
+  "model": "aprendizaje.pasoejerciciobase",
+  "pk": 6,
+  "fields": {
+    "ejercicio": 9,
+    "numero_paso": 4,
+    "expresion_esperada": "4244",
+    "tipo_operacion": "Resultado"
+  }
+},
+{
+  "model": "aprendizaje.pasoejerciciobase",
+  "pk": 7,
+  "fields": {
+    "ejercicio": 14,
+    "numero_paso": 1,
+    "expresion_esperada": "a+(b*c)",
+    "tipo_operacion": "multiplicacion"
+  }
 }
 ]
