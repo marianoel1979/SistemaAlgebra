@@ -1,1 +1,43 @@
-{% extends "aprendizaje/acceso/base.html" %}{% block titulo %}Bienvenida{% endblock %}{% block contenido %}<h2>¡Bienvenido/a, {{ request.user.first_name }}!</h2><p>Tu espacio de práctica está listo.</p>{% for mensaje in messages %}<p class="aviso">{{ mensaje }}</p>{% endfor %}<a class="principal enlace" href="{% url 'explicacion_jerarquia' %}">Comenzar a practicar</a><p><a href="{% url 'cambiar_clave_estudiante' %}">Cambiar mi contraseña</a></p><form method="post" action="{% url 'salir_estudiante' %}">{% csrf_token %}<button type="submit" class="secundario">Cerrar sesión</button></form>{% endblock %}
+{% extends "aprendizaje/acceso/base.html" %}
+
+{% block titulo %}Bienvenida{% endblock %}
+
+{% block contenido %}
+
+<h2>¡Bienvenido/a, {{ request.user.first_name }}!</h2>
+
+<p>Tu espacio de práctica está listo.</p>
+
+{% for mensaje in messages %}
+    <p class="aviso">{{ mensaje }}</p>
+{% endfor %}
+
+{% if progreso %}
+    <p>
+        Nivel {{ progreso.tema.nivel.numero }} -
+        Tema {{ progreso.tema.numero }}:
+        {{ progreso.tema.nombre }}
+    </p>
+
+    <a class="principal enlace"
+       href="{% url 'explicacion_jerarquia' %}">
+        Comenzar a practicar
+    </a>
+{% else %}
+    <p>No tenés un tema asignado.</p>
+{% endif %}
+
+<p>
+    <a href="{% url 'cambiar_clave_estudiante' %}">
+        Cambiar mi contraseña
+    </a>
+</p>
+
+<form method="post" action="{% url 'salir_estudiante' %}">
+    {% csrf_token %}
+    <button type="submit" class="secundario">
+        Cerrar sesión
+    </button>
+</form>
+
+{% endblock %}

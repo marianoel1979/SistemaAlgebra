@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.decorators.http import require_POST
 from .forms_acceso import AccesoForm, RegistroEstudianteForm, CambioClaveForm, RecuperacionClaveForm
-
+from .models import Progreso
 
 def acceso(request):
     if request.user.is_authenticated and getattr(request.user, 'tipo_usuario', None) == 'ESTUDIANTE':
@@ -45,8 +45,16 @@ def registro(request):
 def inicio_estudiante(request):
     if getattr(request.user, 'tipo_usuario', None) != 'ESTUDIANTE':
         return render(request, 'aprendizaje/acceso/sin_permiso.html', status=403)
+
     request.session.set_expiry(600)
-    return render(request, 'aprendizaje/acceso/inicio.html')
+
+    progreso = Progreso.objects.filter(
+        estudiante=request.user
+    ).select_related('tema', 'tema__nivel').first()
+
+    return render(request, 'aprendizaje/acceso/inicio.html', {
+        'progreso': progreso
+    })
 
 
 @login_required(login_url='acceso_estudiante')

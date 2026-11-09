@@ -199,4 +199,4 @@ La versión entregada permite evaluar las funcionalidades implementadas hasta la
 
 El código fuente y las actualizaciones del proyecto se encuentran disponibles en el repositorio público:
 
-[https://github.com/marianoel1979/SistemaAlgebra](https://github.com/marianoel
+https://github.com/marianoel1979/SistemaAlgebra
