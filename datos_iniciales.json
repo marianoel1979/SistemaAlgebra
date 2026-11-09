@@ -1,0 +1,1105 @@
+[
+{
+  "model": "aprendizaje.nivel",
+  "pk": 1,
+  "fields": {
+    "numero": 1,
+    "nombre": "Operaciones básicas",
+    "descripcion": "Practica de suma, resta, multiplicación y división con números enteros."
+  }
+},
+{
+  "model": "aprendizaje.nivel",
+  "pk": 2,
+  "fields": {
+    "numero": 3,
+    "nombre": "Fracciones",
+    "descripcion": "Practica progresiva de equivalencia,simplificacion y operaciones con fracciones."
+  }
+},
+{
+  "model": "aprendizaje.nivel",
+  "pk": 3,
+  "fields": {
+    "numero": 5,
+    "nombre": "Jerarquía y propiedades de las operaciones",
+    "descripcion": "Resolución de operaciones combinadas con números enteros, fracciones y potencias, aplicando la jerarquía de operaciones, el uso de paréntesis y las propiedades matemáticas, como la distributiva."
+  }
+},
+{
+  "model": "aprendizaje.nivel",
+  "pk": 4,
+  "fields": {
+    "numero": 2,
+    "nombre": "Numeros enteros",
+    "descripcion": "Resolución de operaciones con números positivos y negativos, aplicando correctamente las reglas de los signos."
+  }
+},
+{
+  "model": "aprendizaje.nivel",
+  "pk": 5,
+  "fields": {
+    "numero": 4,
+    "nombre": "Potencias",
+    "descripcion": "Aplicación de potencias y sus propiedades en expresiones numéricas, reconociendo su relación con las operaciones básicas."
+  }
+},
+{
+  "model": "aprendizaje.nivel",
+  "pk": 6,
+  "fields": {
+    "numero": 6,
+    "nombre": "Introducción a las ecuaciones",
+    "descripcion": "Reconocimiento de incógnitas, variables, constantes y expresiones algebraicas, comprendiendo el significado de la igualdad."
+  }
+},
+{
+  "model": "aprendizaje.nivel",
+  "pk": 7,
+  "fields": {
+    "numero": 7,
+    "nombre": "Ecuaciones lineales",
+    "descripcion": "Resolución de ecuaciones de primer grado con una incógnita, aplicando las propiedades de la igualdad y la transposición de términos."
+  }
+},
+{
+  "model": "aprendizaje.nivel",
+  "pk": 8,
+  "fields": {
+    "numero": 8,
+    "nombre": "Dominio de ecuaciones",
+    "descripcion": "Resolución autónoma de ecuaciones lineales de mayor complejidad, integrando los procedimientos aprendidos y verificando los resultados."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 1,
+  "fields": {
+    "nivel": 1,
+    "numero": 1,
+    "nombre": "Suma",
+    "descripcion": "Aprendizaje y práctica de la suma."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 2,
+  "fields": {
+    "nivel": 2,
+    "numero": 1,
+    "nombre": "Fracciones equivalentes.",
+    "descripcion": "Reconocimiento y obtención de fracciones equivalentes mediante multiplicación y división del numerador y denominador por un mismo número."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 3,
+  "fields": {
+    "nivel": 3,
+    "numero": 1,
+    "nombre": "Jerarquía de operaciones",
+    "descripcion": "Prioridad de multiplicaciones, divisiones, sumas y restas"
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 4,
+  "fields": {
+    "nivel": 3,
+    "numero": 2,
+    "nombre": "Operaciones combinadas con números enteros",
+    "descripcion": "Operaciones con positivos y negativos, reglas de signos y jerarquía"
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 5,
+  "fields": {
+    "nivel": 3,
+    "numero": 3,
+    "nombre": "Propiedad distributiva",
+    "descripcion": "Aplicación de la distributiva y resolución de paréntesis"
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 6,
+  "fields": {
+    "nivel": 3,
+    "numero": 4,
+    "nombre": "Operaciones combinadas con fracciones",
+    "descripcion": "Sumas, restas, multiplicaciones y divisiones combinadas"
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 7,
+  "fields": {
+    "nivel": 3,
+    "numero": 5,
+    "nombre": "Potencias en operaciones combinadas",
+    "descripcion": "Jerarquía de operaciones que incluyen potencias"
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 8,
+  "fields": {
+    "nivel": 3,
+    "numero": 6,
+    "nombre": "Operaciones combinadas integradoras",
+    "descripcion": "Ejercicios que combinan enteros, fracciones, potencias, paréntesis y distributiva"
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 9,
+  "fields": {
+    "nivel": 1,
+    "numero": 2,
+    "nombre": "Resta",
+    "descripcion": "Operaciones y practica de la resta."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 10,
+  "fields": {
+    "nivel": 1,
+    "numero": 3,
+    "nombre": "Multiplicación",
+    "descripcion": "Practica de la multiplicacion."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 11,
+  "fields": {
+    "nivel": 1,
+    "numero": 4,
+    "nombre": "División",
+    "descripcion": "Práctica de la división."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 12,
+  "fields": {
+    "nivel": 1,
+    "numero": 5,
+    "nombre": "Operaciones básicas combinadas",
+    "descripcion": "Practica de operaciones básicas combinadas."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 13,
+  "fields": {
+    "nivel": 4,
+    "numero": 1,
+    "nombre": "Suma con números negativos",
+    "descripcion": "Practica de suma de numeros negativos."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 14,
+  "fields": {
+    "nivel": 4,
+    "numero": 2,
+    "nombre": "Resta con números negativos",
+    "descripcion": "Practica de resta de numeros negativos."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 15,
+  "fields": {
+    "nivel": 4,
+    "numero": 3,
+    "nombre": "Multiplicación y división con signos",
+    "descripcion": "Practica de división y multiplicación cons signos negativos."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 16,
+  "fields": {
+    "nivel": 4,
+    "numero": 4,
+    "nombre": "Operaciones combinadas con enteros",
+    "descripcion": "Practica de operaciones combinadas con numeros enteros."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 17,
+  "fields": {
+    "nivel": 2,
+    "numero": 2,
+    "nombre": "Suma y resta de fracciones.",
+    "descripcion": "Practica de suma y resta de fracciones."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 18,
+  "fields": {
+    "nivel": 2,
+    "numero": 3,
+    "nombre": "Multiplicación de fracciones",
+    "descripcion": "Practica de multiplicaciones de fracciones."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 20,
+  "fields": {
+    "nivel": 2,
+    "numero": 4,
+    "nombre": "División de fracciones",
+    "descripcion": "Practica de división de fracciones."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 21,
+  "fields": {
+    "nivel": 2,
+    "numero": 5,
+    "nombre": "Operaciones combinadas con fracciones",
+    "descripcion": "Practica de operaciones combinadas con fracciones."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 22,
+  "fields": {
+    "nivel": 5,
+    "numero": 1,
+    "nombre": "Concepto de potencia",
+    "descripcion": "Identificación de la base y el exponente. Interpretación de la potenciación como multiplicación repetida."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 23,
+  "fields": {
+    "nivel": 5,
+    "numero": 2,
+    "nombre": "Cálculo de potencias",
+    "descripcion": "Resolución de potencias con bases enteras y exponentes naturales, incluyendo el uso de paréntesis y signos negativos."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 24,
+  "fields": {
+    "nivel": 5,
+    "numero": 3,
+    "nombre": "Propiedades de las potencias",
+    "descripcion": "Aplicación de las propiedades del producto y cociente de potencias de igual base y potencia de una potencia."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 25,
+  "fields": {
+    "nivel": 5,
+    "numero": 4,
+    "nombre": "Potencias con fracciones",
+    "descripcion": "Cálculo de potencias de fracciones con exponentes naturales, elevando numerador y denominador."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 26,
+  "fields": {
+    "nivel": 5,
+    "numero": 5,
+    "nombre": "Operaciones combinadas con potencias",
+    "descripcion": "Resolución de expresiones que integran potencias, operaciones básicas y paréntesis, respetando la jerarquía de operaciones."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 27,
+  "fields": {
+    "nivel": 6,
+    "numero": 1,
+    "nombre": "Introducción al lenguaje algebraico",
+    "descripcion": "Reconocimiento de variables, constantes y expresiones algebraicas. Representación de situaciones matemáticas mediante letras y números."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 29,
+  "fields": {
+    "nivel": 6,
+    "numero": 2,
+    "nombre": "Términos algebraicos",
+    "descripcion": "Identificación de coeficientes, variables y términos semejantes en expresiones algebraicas."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 30,
+  "fields": {
+    "nivel": 6,
+    "numero": 3,
+    "nombre": "Operaciones con términos semejantes",
+    "descripcion": "Resolución de sumas y restas de términos semejantes, aplicando correctamente los signos y coeficientes."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 31,
+  "fields": {
+    "nivel": 6,
+    "numero": 4,
+    "nombre": "Concepto de ecuación e igualdad",
+    "descripcion": "Comprensión de la ecuación como una igualdad entre dos expresiones y reconocimiento de sus miembros e incógnitas."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 32,
+  "fields": {
+    "nivel": 6,
+    "numero": 5,
+    "nombre": "Propiedades de la igualdad",
+    "descripcion": "Aplicación de las propiedades de la igualdad mediante operaciones equivalentes en ambos miembros de una ecuación."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 33,
+  "fields": {
+    "nivel": 7,
+    "numero": 1,
+    "nombre": "Ecuaciones con suma y resta",
+    "descripcion": "Resolución de ecuaciones lineales sencillas con una incógnita, aplicando operaciones inversas de suma y resta."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 34,
+  "fields": {
+    "nivel": 7,
+    "numero": 2,
+    "nombre": "Ecuaciones con multiplicación y división",
+    "descripcion": "Resolución de ecuaciones lineales con coeficientes enteros, utilizando operaciones inversas de multiplicación y división."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 35,
+  "fields": {
+    "nivel": 7,
+    "numero": 3,
+    "nombre": "Transposición de términos",
+    "descripcion": "Resolución de ecuaciones trasladando términos entre ambos miembros, respetando las propiedades de la igualdad."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 36,
+  "fields": {
+    "nivel": 7,
+    "numero": 4,
+    "nombre": "Ecuaciones con incógnitas en ambos miembros",
+    "descripcion": "Resolución de ecuaciones lineales que presentan términos con la incógnita en ambos lados de la igualdad."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 37,
+  "fields": {
+    "nivel": 7,
+    "numero": 5,
+    "nombre": "Ecuaciones con paréntesis",
+    "descripcion": "Resolución de ecuaciones lineales que requieren aplicar la propiedad distributiva y reducir términos semejantes."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 38,
+  "fields": {
+    "nivel": 7,
+    "numero": 6,
+    "nombre": "Ecuaciones con fracciones",
+    "descripcion": "Resolución de ecuaciones lineales con coeficientes fraccionarios, aplicando operaciones equivalentes y simplificación."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 39,
+  "fields": {
+    "nivel": 8,
+    "numero": 1,
+    "nombre": "Ecuaciones con operaciones combinadas",
+    "descripcion": "Resolución de ecuaciones lineales que integran sumas, restas, multiplicaciones y divisiones, respetando la jerarquía de operaciones."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 40,
+  "fields": {
+    "nivel": 8,
+    "numero": 2,
+    "nombre": "Ecuaciones con paréntesis y distributiva",
+    "descripcion": "Resolución de ecuaciones con varios paréntesis, aplicando la propiedad distributiva y la reducción de términos semejantes."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 41,
+  "fields": {
+    "nivel": 8,
+    "numero": 3,
+    "nombre": "Ecuaciones con fracciones y signos negativos",
+    "descripcion": "Resolución de ecuaciones lineales que combinan coeficientes fraccionarios, números negativos y operaciones equivalentes."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 42,
+  "fields": {
+    "nivel": 8,
+    "numero": 4,
+    "nombre": "Ecuaciones con incógnitas en ambos miembros",
+    "descripcion": "Resolución de ecuaciones de mayor complejidad que requieren agrupar variables y constantes en ambos miembros."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 43,
+  "fields": {
+    "nivel": 8,
+    "numero": 5,
+    "nombre": "Verificación de soluciones",
+    "descripcion": "Comprobación de los resultados obtenidos mediante la sustitución de la incógnita en la ecuación original."
+  }
+},
+{
+  "model": "aprendizaje.tema",
+  "pk": 44,
+  "fields": {
+    "nivel": 8,
+    "numero": 6,
+    "nombre": "Evaluación integradora de ecuaciones lineales",
+    "descripcion": "Resolución autónoma de ecuaciones que integran los contenidos de los niveles anteriores, aplicando diferentes procedimientos y verificando los resultados."
+  }
+},
+{
+  "model": "aprendizaje.error",
+  "pk": 1,
+  "fields": {
+    "codigo": "E001",
+    "nombre": "Error de signos en operaciones con enteros",
+    "descripcion": "Se asigna incorrectamente el signo de un numero al operar con numeros enteros."
+  }
+},
+{
+  "model": "aprendizaje.error",
+  "pk": 2,
+  "fields": {
+    "codigo": "E002",
+    "nombre": "Errores en operaciones con fracciones",
+    "descripcion": "Dificultades al aplicar propiedades y procedimientos de las fracciones, incluyendo equivalencia, simplificación y operaciones."
+  }
+},
+{
+  "model": "aprendizaje.error",
+  "pk": 3,
+  "fields": {
+    "codigo": "E003",
+    "nombre": "Error de distributiva",
+    "descripcion": "Aplica de forma incorrecta o incompleta la propiedad distributiva."
+  }
+},
+{
+  "model": "aprendizaje.error",
+  "pk": 4,
+  "fields": {
+    "codigo": "E004",
+    "nombre": "Confusión de términos",
+    "descripcion": "Confunde variables con constantes en expresiones algebraicas."
+  }
+},
+{
+  "model": "aprendizaje.error",
+  "pk": 5,
+  "fields": {
+    "codigo": "E005",
+    "nombre": "Error de coeficientes",
+    "descripcion": "Opera incorrectamente con los coeficientes de una variable."
+  }
+},
+{
+  "model": "aprendizaje.error",
+  "pk": 6,
+  "fields": {
+    "codigo": "E006",
+    "nombre": "Error de igualdad",
+    "descripcion": "Aplica incorrectamente las propiedades de la igualdad."
+  }
+},
+{
+  "model": "aprendizaje.error",
+  "pk": 7,
+  "fields": {
+    "codigo": "E007",
+    "nombre": "Error de transposición",
+    "descripcion": "Traslada términos entre miembros de una ecuación de forma incorrecta."
+  }
+},
+{
+  "model": "aprendizaje.error",
+  "pk": 8,
+  "fields": {
+    "codigo": "E008",
+    "nombre": "Error de jerarquía",
+    "descripcion": "No respeta el orden de prioridad de las operaciones matemáticas."
+  }
+},
+{
+  "model": "aprendizaje.patrontermino",
+  "pk": 1,
+  "fields": {
+    "patron": "a*(b-c)",
+    "descripcion": "Multiplicación de un número por una resta entre paréntesis.",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.patrontermino",
+  "pk": 2,
+  "fields": {
+    "patron": "a/b*c/d",
+    "descripcion": "Multiplicación de dos fracciones.",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.patrontermino",
+  "pk": 3,
+  "fields": {
+    "patron": "a*(b+c)**2",
+    "descripcion": "Multiplicación de un número por una potencia con suma entre paréntesis",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.patrontermino",
+  "pk": 4,
+  "fields": {
+    "patron": "(a-b)/c/d",
+    "descripcion": "Resta en el numerador seguida de dos divisiones",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.patrontermino",
+  "pk": 5,
+  "fields": {
+    "patron": "a+b*c",
+    "descripcion": "Suma y multiplicación con prioridad de la multiplicación",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.patrontermino",
+  "pk": 6,
+  "fields": {
+    "patron": "a+b*c-d",
+    "descripcion": "Jerarquía: a+b*c-d",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.patrontermino",
+  "pk": 7,
+  "fields": {
+    "patron": "a+b*c-d*e",
+    "descripcion": "Jerarquía: a+b*c-d*e",
+    "activo": true
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 1,
+  "fields": {
+    "patron": 1,
+    "paso_anterior": null,
+    "expresion": "a*r",
+    "calculo_r": "b-c",
+    "calculo_s": null,
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Resolver el paréntesis, donde r = b-c.",
+    "es_final": false,
+    "regla": "resolver_parentesis",
+    "error_asociado": 8
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 2,
+  "fields": {
+    "patron": 1,
+    "paso_anterior": null,
+    "expresion": "a*b-a*c",
+    "calculo_r": null,
+    "calculo_s": null,
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Aplicar propiedad distributiva.",
+    "es_final": false,
+    "regla": "aplicar_distributiva",
+    "error_asociado": 3
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 3,
+  "fields": {
+    "patron": 1,
+    "paso_anterior": 1,
+    "expresion": "r",
+    "calculo_r": "a*r",
+    "calculo_s": null,
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Resolver la multiplicación.",
+    "es_final": true,
+    "regla": "resolver_multiplicacion",
+    "error_asociado": null
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 4,
+  "fields": {
+    "patron": 1,
+    "paso_anterior": 2,
+    "expresion": "r-s",
+    "calculo_r": "a*b",
+    "calculo_s": "a*c",
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Resolver las dos multiplicaciones.",
+    "es_final": false,
+    "regla": "multiplicar_terminos",
+    "error_asociado": null
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 5,
+  "fields": {
+    "patron": 1,
+    "paso_anterior": 4,
+    "expresion": "r",
+    "calculo_r": "r-s",
+    "calculo_s": null,
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Resolver la resta.",
+    "es_final": true,
+    "regla": "resolver_resta",
+    "error_asociado": null
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 6,
+  "fields": {
+    "patron": 2,
+    "paso_anterior": null,
+    "expresion": "r/s",
+    "calculo_r": "a*c",
+    "calculo_s": "b*d",
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Multiplicar los numeradores y los denominadores",
+    "es_final": false,
+    "regla": "multiplicar_fracciones",
+    "error_asociado": 2
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 7,
+  "fields": {
+    "patron": 2,
+    "paso_anterior": 6,
+    "expresion": "r/s",
+    "calculo_r": "r/MCD(r,s)",
+    "calculo_s": "s/MCD(r,s)",
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Simplificar la fracción",
+    "es_final": true,
+    "regla": "simplificar_fraccion",
+    "error_asociado": 2
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 8,
+  "fields": {
+    "patron": 2,
+    "paso_anterior": null,
+    "expresion": "r/s*t/u",
+    "calculo_r": "a/MCD(a,d)",
+    "calculo_s": "b/MCD(b,c)",
+    "calculo_t": "c/MCD(b,c)",
+    "calculo_u": "d/MCD(a,d)",
+    "descripcion": "Simplificar en cruz",
+    "es_final": false,
+    "regla": "multiplicar_fracciones",
+    "error_asociado": 2
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 9,
+  "fields": {
+    "patron": 2,
+    "paso_anterior": 8,
+    "expresion": "r/s",
+    "calculo_r": "r*t",
+    "calculo_s": "s*u",
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Multiplicar las fracciones simplificadas",
+    "es_final": true,
+    "regla": "multiplicar_fracciones",
+    "error_asociado": 2
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 10,
+  "fields": {
+    "patron": 3,
+    "paso_anterior": null,
+    "expresion": "a*r**2",
+    "calculo_r": "b+c",
+    "calculo_s": null,
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Resolver la suma del paréntesis",
+    "es_final": false,
+    "regla": "resolver_potencia",
+    "error_asociado": 8
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 11,
+  "fields": {
+    "patron": 3,
+    "paso_anterior": 10,
+    "expresion": "a*s",
+    "calculo_r": null,
+    "calculo_s": "r**2",
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Resolver la potencia",
+    "es_final": false,
+    "regla": "calcular_potencia",
+    "error_asociado": null
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 12,
+  "fields": {
+    "patron": 3,
+    "paso_anterior": 11,
+    "expresion": "r",
+    "calculo_r": "a*s",
+    "calculo_s": null,
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Resolver la multiplicación",
+    "es_final": true,
+    "regla": "resolver_multiplicacion",
+    "error_asociado": null
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 13,
+  "fields": {
+    "patron": 4,
+    "paso_anterior": null,
+    "expresion": "r/c/d",
+    "calculo_r": "a-b",
+    "calculo_s": null,
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Resolver resta del numerador",
+    "es_final": false,
+    "regla": "resolver_parentesis",
+    "error_asociado": null
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 14,
+  "fields": {
+    "patron": 4,
+    "paso_anterior": 13,
+    "expresion": "s/d",
+    "calculo_r": null,
+    "calculo_s": "r/c",
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Resolver primera división",
+    "es_final": false,
+    "regla": "resolver_primera_division",
+    "error_asociado": null
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 15,
+  "fields": {
+    "patron": 4,
+    "paso_anterior": 14,
+    "expresion": "r",
+    "calculo_r": "s/d",
+    "calculo_s": null,
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Resolver segunda división",
+    "es_final": true,
+    "regla": "resolver_segunda_division",
+    "error_asociado": null
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 18,
+  "fields": {
+    "patron": 5,
+    "paso_anterior": null,
+    "expresion": "a+r",
+    "calculo_r": "b*c",
+    "calculo_s": null,
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Multiplicar primero",
+    "es_final": false,
+    "regla": "resolver_multiplicacion",
+    "error_asociado": 8
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 19,
+  "fields": {
+    "patron": 5,
+    "paso_anterior": 18,
+    "expresion": "s",
+    "calculo_r": null,
+    "calculo_s": "a+r",
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Resolver la suma",
+    "es_final": true,
+    "regla": "resolver_suma",
+    "error_asociado": null
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 20,
+  "fields": {
+    "patron": 6,
+    "paso_anterior": null,
+    "expresion": "a+r-d",
+    "calculo_r": "b*c",
+    "calculo_s": null,
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Multiplicar primero",
+    "es_final": false,
+    "regla": "resolver_multiplicacion",
+    "error_asociado": 8
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 21,
+  "fields": {
+    "patron": 6,
+    "paso_anterior": 20,
+    "expresion": "s-d",
+    "calculo_r": null,
+    "calculo_s": "a+r",
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Resolver la suma",
+    "es_final": false,
+    "regla": "resolver_suma",
+    "error_asociado": null
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 22,
+  "fields": {
+    "patron": 6,
+    "paso_anterior": 21,
+    "expresion": "t",
+    "calculo_r": null,
+    "calculo_s": null,
+    "calculo_t": "s-d",
+    "calculo_u": null,
+    "descripcion": "Resolver la resta",
+    "es_final": true,
+    "regla": "resolver_resta",
+    "error_asociado": null
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 23,
+  "fields": {
+    "patron": 7,
+    "paso_anterior": null,
+    "expresion": "a+r-d*e",
+    "calculo_r": "b*c",
+    "calculo_s": null,
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Multiplicar el primer producto",
+    "es_final": false,
+    "regla": "resolver_multiplicacion",
+    "error_asociado": 8
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 24,
+  "fields": {
+    "patron": 7,
+    "paso_anterior": 23,
+    "expresion": "a+r-s",
+    "calculo_r": null,
+    "calculo_s": "d*e",
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Multiplicar el segundo producto",
+    "es_final": false,
+    "regla": "resolver_multiplicacion",
+    "error_asociado": 8
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 25,
+  "fields": {
+    "patron": 7,
+    "paso_anterior": 24,
+    "expresion": "t-s",
+    "calculo_r": null,
+    "calculo_s": null,
+    "calculo_t": "a+r",
+    "calculo_u": null,
+    "descripcion": "Resolver la suma",
+    "es_final": false,
+    "regla": "resolver_suma",
+    "error_asociado": null
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 26,
+  "fields": {
+    "patron": 7,
+    "paso_anterior": 25,
+    "expresion": "u",
+    "calculo_r": null,
+    "calculo_s": null,
+    "calculo_t": null,
+    "calculo_u": "t-s",
+    "descripcion": "Resolver la resta",
+    "es_final": true,
+    "regla": "resolver_resta",
+    "error_asociado": null
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 27,
+  "fields": {
+    "patron": 7,
+    "paso_anterior": null,
+    "expresion": "a+b*c-r",
+    "calculo_r": "d*e",
+    "calculo_s": null,
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Multiplicar el segundo producto",
+    "es_final": false,
+    "regla": "resolver_multiplicacion",
+    "error_asociado": 8
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 28,
+  "fields": {
+    "patron": 7,
+    "paso_anterior": 27,
+    "expresion": "a+s-r",
+    "calculo_r": null,
+    "calculo_s": "b*c",
+    "calculo_t": null,
+    "calculo_u": null,
+    "descripcion": "Multiplicar el primer producto",
+    "es_final": false,
+    "regla": "resolver_multiplicacion",
+    "error_asociado": 8
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 29,
+  "fields": {
+    "patron": 7,
+    "paso_anterior": 28,
+    "expresion": "t-r",
+    "calculo_r": null,
+    "calculo_s": null,
+    "calculo_t": "a+s",
+    "calculo_u": null,
+    "descripcion": "Resolver la suma",
+    "es_final": false,
+    "regla": "resolver_suma",
+    "error_asociado": null
+  }
+},
+{
+  "model": "aprendizaje.pasopatron",
+  "pk": 30,
+  "fields": {
+    "patron": 7,
+    "paso_anterior": 29,
+    "expresion": "u",
+    "calculo_r": null,
+    "calculo_s": null,
+    "calculo_t": null,
+    "calculo_u": "t-r",
+    "descripcion": "Resolver la resta",
+    "es_final": true,
+    "regla": "resolver_resta",
+    "error_asociado": null
+  }
+}
+]
