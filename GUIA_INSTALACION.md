@@ -126,7 +126,21 @@ SistemaAlgebra contempla dos perfiles de usuario:
 Para realizar pruebas se requiere disponer de las credenciales correspondientes al perfil docente o registrar un estudiante utilizando un código de grupo válido.
 
 Las credenciales y códigos de demostración se proporcionarán por separado, para evitar publicar contraseñas en el repositorio.
+### Opción 1. Ingresar con un usuario existente
 
+Usuario: Mateomarcu
+
+Contraseña: la correspondiente al usuario de demostración, proporcionada por separado.
+
+Contenido asignado: Nivel 5, Tema 1 – Jerarquía de operaciones.
+
+### Opción 2. Registrar un estudiante nuev
+
+Para registrar un estudiante, utilizar el siguiente grupo previamente creado:
+
+Grupo: 1° A
+
+Código de grupo: 66D7994E
 ## 11. Actualizar el sistema
 
 Cuando se publique una nueva versión del código, ingresar a la carpeta del proyecto y ejecutar:
@@ -176,3 +190,4 @@ La versión entregada permite evaluar las funcionalidades implementadas hasta la
 El código fuente y las actualizaciones del proyecto se encuentran disponibles en el repositorio público:
 
 https://github.com/marianoel1979/SistemaAlgebra
+
