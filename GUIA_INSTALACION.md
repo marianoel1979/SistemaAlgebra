@@ -96,6 +96,16 @@ Este comando incorpora los datos iniciales incluidos en el repositorio, como niv
 La carga debe realizarse durante la instalación inicial, sobre una base de datos preparada para la demostración.
 
 No es necesario volver a ejecutar este comando para cada actualización del código.
+### Cargar los datos de demostración
+
+Para disponer de un docente, un grupo y un estudiante de prueba,
+ejecutar después de cargar los datos iniciales:
+
+```powershell
+python manage.py loaddata datos_demo.json --settings=config.settings_instalacion
+```
+El estudiante demo_tema1 tiene asignado el Nivel 5,
+Tema 1 – Jerarquía de operaciones
 
 ## 9. Iniciar el servidor
 
@@ -128,10 +138,8 @@ Para realizar pruebas se requiere disponer de las credenciales correspondientes 
 Las credenciales y códigos de demostración se proporcionarán por separado, para evitar publicar contraseñas en el repositorio.
 ### Opción 1. Ingresar con un usuario existente
 
-Usuario: Mateomarcu
-
-Contraseña: la correspondiente al usuario de demostración, proporcionada por separado.
-
+Usuario: demo_tema1
+Contraseña: DemoAlgebra2026
 Contenido asignado: Nivel 5, Tema 1 – Jerarquía de operaciones.
 
 ### Opción 2. Registrar un estudiante nuev

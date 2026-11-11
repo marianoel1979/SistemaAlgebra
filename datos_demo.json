@@ -1,0 +1,73 @@
+[
+{
+  "model": "usuarios.usuario",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$cAl06biCyZfYIaJrBikyrl$x+M3jHL8oSEtyAZB1uGju8h+ywqLz3M2Duo3LCX8f+8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "docente_demo",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-11-11T11:55:23.797Z",
+    "tipo_usuario": "DOCENTE",
+    "grupo": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "usuarios.usuario",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$yg9ffe5bfQb1JdrmbD6EVD$Cycx0CTyxLXVrfknAy1H7mT7sFY42jc+5SL28yhnsvI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "demo_tema1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-11-11T11:56:21.736Z",
+    "tipo_usuario": "ESTUDIANTE",
+    "grupo": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "aprendizaje.grupo",
+  "pk": 1,
+  "fields": {
+    "nombre": "1° A",
+    "codigo": "66D7994E",
+    "docente": 1,
+    "activo": true,
+    "fecha_creacion": "2026-11-11T11:55:55.057Z"
+  }
+},
+{
+  "model": "aprendizaje.progreso",
+  "pk": 1,
+  "fields": {
+    "estudiante": 2,
+    "tema": 3,
+    "modo": "PRACTICA",
+    "error": null,
+    "dificultad_actual": 1,
+    "aciertos_dificultad": 0,
+    "ejercicio_refuerzo_actual": null,
+    "dificultad_refuerzo": 1,
+    "aciertos_refuerzo": 0,
+    "ejercicio_practica_actual": null,
+    "aciertos_evaluacion": 0,
+    "ejercicios_evaluacion_realizados": 0,
+    "modo_anterior": null,
+    "tema_aprobado": false
+  }
+}
+]
